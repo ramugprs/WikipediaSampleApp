@@ -1,0 +1,6 @@
+framework module Pods_WikipediaApp {
+  umbrella header "Pods-WikipediaApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

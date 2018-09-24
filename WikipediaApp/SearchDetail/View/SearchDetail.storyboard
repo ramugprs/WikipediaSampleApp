@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Detail View Controller-->
+        <scene sceneID="pTW-F1-wl0">
+            <objects>
+                <viewController storyboardIdentifier="SearchDetailVCID" id="1pN-th-4gj" customClass="SearchDetailViewController" customModule="WikipediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5zw-nM-gnj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-sv-Bit">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1pN-th-4gj" id="zDi-4j-Wp7"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xEX-sv-Bit" firstAttribute="trailing" secondItem="bZI-SF-ktX" secondAttribute="trailing" id="NBd-Zm-RgF"/>
+                            <constraint firstItem="xEX-sv-Bit" firstAttribute="bottom" secondItem="bZI-SF-ktX" secondAttribute="bottom" id="j8l-5r-7yX"/>
+                            <constraint firstItem="xEX-sv-Bit" firstAttribute="leading" secondItem="bZI-SF-ktX" secondAttribute="leading" id="oJf-q2-DqE"/>
+                            <constraint firstItem="xEX-sv-Bit" firstAttribute="top" secondItem="bZI-SF-ktX" secondAttribute="top" constant="44" id="yMF-bQ-6id"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bZI-SF-ktX"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="xEX-sv-Bit" id="PkQ-jB-hRV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdQ-ZU-h1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312.5" y="28.52112676056338"/>
+        </scene>
+    </scenes>
+</document>
